@@ -26,9 +26,9 @@ export default function EventCard({
   socialLinks
 }: EventCardProps) {
   return (
-    <div className="flex flex-col gap-4 rounded-xl bg-gray-100 p-5 sm:flex-row sm:gap-6 sm:p-6">
+    <div className="flex flex-col gap-4 rounded-4xl bg-[var(--color-background-gray)] p-5 sm:flex-row sm:gap-6 sm:p-4">
       {/* Event Image */}
-      <div className="relative h-56 w-full shrink-0 overflow-hidden rounded-lg sm:h-44 sm:w-44">
+      <div className="relative h-56 w-full shrink-0 overflow-hidden rounded-4xl sm:h-44 sm:w-64">
         <Image
           src={image}
           alt={title}
@@ -41,22 +41,22 @@ export default function EventCard({
       <div className="flex flex-1 flex-col justify-between gap-3">
         <div className="flex flex-col gap-2">
           {/* Time and Date */}
-          <div className="text-sm font-medium text-[var(--color-text-gray)]">
+          <div className="text-md font-medium text-[var(--color-text-black)]">
             {time} | {date}
           </div>
 
           {/* Title */}
-          <h3 className="text-xl font-bold leading-tight text-[var(--color-text-black)] md:text-2xl">
+          <h2 className="text-2xl leading-tight text-[var(--color-text-black)] md:text-3xl">
             {title}
-          </h3>
+          </h2>
 
-          {/* Speaker */}
-          <p className="text-base font-medium text-[var(--color-text-black)]">
+          {/* Description */}
+          <h2 className="text-2xl leading-tight text-[var(--color-text-black)] md:text-3xl -mt-2.5">
             {description}
-          </p>
+          </h2>
 
           {/* Location */}
-          <p className="text-sm font-medium text-[var(--color-primary-blue)]">
+          <p className="text-md font-medium text-[var(--color-dark-blue)]">
             Location: {location}
           </p>
         </div>

@@ -5,22 +5,20 @@ interface PageHeroProps {
 export default function PageHero({ title = "Events and Workshops" }: PageHeroProps) {
   return (
     <div className="mb-10 flex items-center gap-4">
-      <h1 className="text-3xl font-bold leading-tight text-[var(--color-text-black)] md:text-4xl lg:text-5xl">
+      <h1 className="text-3xl font-medium leading-tight text-[var(--color-text-black)] font-[var(--font-neue-montreal)] md:text-4xl lg:text-5xl">
         {title}
       </h1>
-      <div className="flex items-center">
+      <div className="hidden md:flex items-center">
         <svg
-          className="h-7 w-7 text-[var(--color-primary-yellow)] md:h-8 md:w-8"
+          className="h-12 w-12"
+          viewBox="0 0 69 69"
           fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
         >
           <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2.5}
-            d="M9 5l7 7-7 7"
+            d="M64.1902 37.182C65.9475 35.4246 65.9475 32.5754 64.1902 30.818L35.5524 2.18019C33.795 0.422836 30.9458 0.422836 29.1884 2.18019C27.431 3.93755 27.431 6.7868 29.1884 8.54416L54.6442 34L29.1884 59.4558C27.431 61.2132 27.431 64.0624 29.1884 65.8198C30.9458 67.5772 33.795 67.5772 35.5524 65.8198L64.1902 37.182ZM0 34V38.5H61.0082V34V29.5H0V34Z"
+            fill="var(--color-primary-yellow)"
           />
         </svg>
       </div>
