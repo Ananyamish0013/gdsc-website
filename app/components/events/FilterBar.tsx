@@ -39,13 +39,16 @@ export default function FilterBar({
           options={locationOptions}
           value={locationValue}
           onChange={onLocationChange}
+          colorbg="var(--color-light-blue)"
+          colortext="var(--color-dark-blue)"
         />
       </div>
       <div className="flex-1">
         <FilterDropdown
           label="Event Types"
           options={eventTypeOptions}
-          highlighted={true}
+          colorbg="var(--color-light-green)"
+          colortext="#0D652D"
           value={eventTypeValue}
           onChange={onEventTypeChange}
         />

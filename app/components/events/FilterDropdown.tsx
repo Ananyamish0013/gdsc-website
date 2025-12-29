@@ -3,7 +3,8 @@
 interface FilterDropdownProps {
   label: string;
   options?: string[];
-  highlighted?: boolean;
+  colorbg?: string;
+  colortext?: string;
   value?: string;
   onChange?: (value: string) => void;
 }
@@ -11,20 +12,22 @@ interface FilterDropdownProps {
 export default function FilterDropdown({
   label,
   options = [],
-  highlighted = false,
+  colorbg,
+  colortext,
   value,
   onChange
 }: FilterDropdownProps) {
+
   return (
     <div className="relative flex items-center">
       <select
         value={value || ''}
         onChange={(e) => onChange?.(e.target.value)}
-        className={`w-full appearance-none rounded-lg border border-gray-300 bg-white px-4 py-2.5 pr-10 text-sm text-[var(--color-text-black)] focus:border-[var(--color-primary-blue)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-blue)] focus:ring-opacity-20 ${
-          highlighted
-            ? 'border-[var(--color-primary-green)] bg-[var(--color-primary-green)] bg-opacity-10'
-            : ''
-        }`}
+        className="w-full appearance-none rounded-full font-medium border-0 px-4 py-2.5 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-opacity-30"
+        style={{ 
+          backgroundColor: colorbg, 
+          color: colortext,
+        }}
       >
         <option value="" disabled>
           {label}
@@ -37,11 +40,12 @@ export default function FilterDropdown({
       </select>
       <div className="pointer-events-none absolute right-3 flex items-center">
         <svg
-          className="h-5 w-5 text-[var(--color-text-gray)]"
+          className="h-5 w-5"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
           aria-hidden="true"
+          style={{ color: colortext }}
         >
           <path
             strokeLinecap="round"
