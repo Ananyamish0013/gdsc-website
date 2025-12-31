@@ -4,13 +4,13 @@ interface PageHeroProps {
 
 export default function PageHero({ title = "Events and Workshops" }: PageHeroProps) {
   return (
-    <div className="mb-10 flex items-center gap-4">
+    <div className="mb-10 flex items-center gap-4 group cursor-pointer">
       <h1 className="text-3xl font-medium leading-tight text-[var(--color-text-black)] font-[var(--font-neue-montreal)] md:text-4xl lg:text-5xl">
         {title}
       </h1>
       <div className="hidden md:flex items-center">
         <svg
-          className="h-12 w-12"
+          className="h-12 w-12 transition-transform duration-300 ease-out group-hover:translate-x-2"
           viewBox="0 0 69 69"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

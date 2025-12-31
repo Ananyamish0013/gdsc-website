@@ -62,11 +62,13 @@ export default function EventsPage() {
 
         {/* Upcoming Events Section */}
         <div className="mb-8">
-          <h2 className="text-3xl font-medium text-[var(--color-text-black)] md:text-4xl">
-            Upcoming Events
-          </h2>
-          {/* Mobile-only separator */}
-          <div className="mt-2 h-0.5 w-full bg-[var(--color-text-black)] md:hidden" />
+          <div className="inline-block group cursor-pointer">
+            <h2 className="text-3xl font-medium text-[var(--color-text-black)] md:text-4xl">
+              Upcoming Events
+            </h2>
+            {/* Underline separator - visible on mobile (no animation), animates on desktop hover */}
+            <div className="mt-2 h-0.5 w-full bg-[var(--color-text-black)] origin-left scale-x-100 md:scale-x-0 md:group-hover:scale-x-100 md:transition-transform md:duration-500 md:ease-out" />
+          </div>
         </div>
 
         {/* Event Cards */}
