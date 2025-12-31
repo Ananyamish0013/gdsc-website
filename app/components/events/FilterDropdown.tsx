@@ -1,5 +1,7 @@
 'use client';
 
+import { ChevronDownIcon } from '@/app/components/icons';
+
 interface FilterDropdownProps {
   label: string;
   options?: string[];
@@ -39,23 +41,11 @@ export default function FilterDropdown({
         ))}
       </select>
       <div className="pointer-events-none absolute right-3 flex items-center">
-        <svg
+        <ChevronDownIcon
           className="h-5 w-5"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
           style={{ color: colortext }}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
+        />
       </div>
     </div>
   );
 }
-
