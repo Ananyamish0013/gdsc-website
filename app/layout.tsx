@@ -66,9 +66,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${fragmentMono.variable} ${neueMontreal.variable} ${productSans.variable} antialiased`}
-      >
+         <body
+              className="
+          min-h-screen
+          bg-[url('/background.png')]
+          bg-cover bg-center bg-no-repeat
+          bg-fixed
+          overflow-x-hidden
+        "
+          >
         {children}
       </body>
     </html>
