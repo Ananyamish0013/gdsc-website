@@ -1,8 +1,10 @@
 // Home page component
 
+import { SearchIcon } from "@/app/components/icons/SearchIcon";
+import { DropdownIcon } from "@/app/components/icons/DropdownIcon";
 
 
-export default function Home() {
+export default function Feed() {
     const links = [
         "https://www.instagram.com/gdgnsut/",
         "https://youtube.com",
@@ -14,9 +16,7 @@ export default function Home() {
     return (
 
         // Main container (page background + padding)
-        <main className="min-h-screen w-full px-6 lg:px-12 py-10">
-
-
+        < main className = "min-h-screen w-full px-6 lg:px-12 py-10" >
             {/* ------------ HEADING ------------ */}
             <section className="mb-10">
                 <h1 className="text-6xl font-bold text-gray-900">
@@ -40,45 +40,42 @@ export default function Home() {
             <section className="mb-4 flex items-center gap-5">
 
                 {/* Search input */}
-                <div className="relative">
+                <div className="relative w-72">
+                    <SearchIcon
+                        className="
+      pointer-events-none
+      absolute left-4 top-1/2
+      -translate-y-1/2
+      h-5 w-5
+      text-emerald-700
+    "
+                    />
+
                     <input
                         type="text"
                         placeholder="Search"
                         className="
-              w-72 rounded-2xl
-              bg-emerald-100
-              px-6 py-3 pr-12
-              text-emerald-900 placeholder-emerald-700
-              outline-none
-              focus:ring-2 focus:ring-emerald-400
-            "
+      w-full rounded-2xl
+      bg-emerald-100
+      py-3 pl-12 pr-4
+      text-emerald-900 placeholder-emerald-700
+      outline-none
+      focus:ring-2 focus:ring-emerald-400
+    "
                     />
-
-                    {/* Search icon (positioned inside input) */}
-                    <svg
-                        className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-700"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                    >
-                        <circle cx="11" cy="11" r="8" />
-                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    </svg>
                 </div>
-
                 {/* Dropdown (Event types) */}
-                <div className="relative">
+                <div className="relative w-48">
                     <select
                         className="
-              w-48 rounded-2xl
-              bg-blue-100
-              px-5 py-3 pr-10
-              text-blue-900
-              outline-none
-              appearance-none
-              focus:ring-2 focus:ring-blue-400
-            "
+      w-full rounded-2xl
+      bg-blue-100
+      px-5 py-3 pr-10
+      text-blue-900
+      outline-none
+      appearance-none
+      focus:ring-2 focus:ring-blue-400
+    "
                     >
                         <option>Event types</option>
                         <option>Workshops</option>
@@ -86,17 +83,17 @@ export default function Home() {
                         <option>Talks</option>
                     </select>
 
-                    {/* Dropdown arrow icon */}
-                    <svg
-                        className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-blue-700"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                    >
-                        <polyline points="6 9 12 15 18 9" />
-                    </svg>
+                    <DropdownIcon
+                        className="
+      pointer-events-none
+      absolute right-4 top-1/2
+      -translate-y-1/2
+      h-5 w-5
+      text-blue-700
+    "
+                    />
                 </div>
+
             </section>
 
             {/* ------------ FEED (Background + Grid) ------------ */}
