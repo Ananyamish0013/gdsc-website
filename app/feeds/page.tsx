@@ -1,8 +1,6 @@
-// Home page component
+// Feed page component
 
-import { SearchIcon } from "@/app/components/icons/SearchIcon";
-import { DropdownIcon } from "@/app/components/icons/DropdownIcon";
-
+import { SearchIcon, DropdownIcon } from "@/app/components/icons";
 
 export default function Feed() {
     const links = [
@@ -13,17 +11,16 @@ export default function Feed() {
         "https://www.instagram.com/gdgnsut",
         "https://www.instagram.com/gdgnsut",
     ];
-    return (
 
-        // Main container (page background + padding)
-        < main className = "min-h-screen w-full px-6 lg:px-12 py-10" >
+    return (
+        <main className="min-h-screen w-full px-4 sm:px-6 lg:px-12 py-6 sm:py-10">
             {/* ------------ HEADING ------------ */}
-            <section className="mb-10">
-                <h1 className="text-6xl font-bold text-gray-900">
+            <section className="mb-8 sm:mb-10">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900">
                     Take a look at our Feed
                 </h1>
 
-                <p className="mt-3 text-xl text-gray-600">
+                <p className="mt-3 text-base sm:text-lg lg:text-xl text-gray-600">
                     Follow us on{" "}
                     <a
                         href="https://instagram.com/GDGNSUT"
@@ -37,45 +34,45 @@ export default function Feed() {
             </section>
 
             {/* ------------ FILTERS (Search + Dropdown) ------------ */}
-            <section className="mb-4 flex items-center gap-5">
-
+            <section className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center">
                 {/* Search input */}
-                <div className="relative w-72">
+                <div className="relative w-full sm:w-72">
                     <SearchIcon
                         className="
-      pointer-events-none
-      absolute left-4 top-1/2
-      -translate-y-1/2
-      h-5 w-5
-      text-emerald-700
-    "
+              pointer-events-none
+              absolute left-4 top-1/2
+              -translate-y-1/2
+              h-5 w-5
+              text-emerald-700
+            "
                     />
 
                     <input
                         type="text"
                         placeholder="Search"
                         className="
-      w-full rounded-2xl
-      bg-emerald-100
-      py-3 pl-12 pr-4
-      text-emerald-900 placeholder-emerald-700
-      outline-none
-      focus:ring-2 focus:ring-emerald-400
-    "
+              w-full rounded-2xl
+              bg-emerald-100
+              py-3 pl-12 pr-4
+              text-emerald-900 placeholder-emerald-700
+              outline-none
+              focus:ring-2 focus:ring-emerald-400
+            "
                     />
                 </div>
+
                 {/* Dropdown (Event types) */}
-                <div className="relative w-48">
+                <div className="relative w-full sm:w-48">
                     <select
                         className="
-      w-full rounded-2xl
-      bg-blue-100
-      px-5 py-3 pr-10
-      text-blue-900
-      outline-none
-      appearance-none
-      focus:ring-2 focus:ring-blue-400
-    "
+              w-full rounded-2xl
+              bg-blue-100
+              px-5 py-3 pr-10
+              text-blue-900
+              outline-none
+              appearance-none
+              focus:ring-2 focus:ring-blue-400
+            "
                     >
                         <option>Event types</option>
                         <option>Workshops</option>
@@ -85,29 +82,19 @@ export default function Feed() {
 
                     <DropdownIcon
                         className="
-      pointer-events-none
-      absolute right-4 top-1/2
-      -translate-y-1/2
-      h-5 w-5
-      text-blue-700
-    "
+              pointer-events-none
+              absolute right-4 top-1/2
+              -translate-y-1/2
+              h-5 w-5
+              text-blue-700
+            "
                     />
                 </div>
-
             </section>
 
-            {/* ------------ FEED (Background + Grid) ------------ */}
-            <section
-                className="
-
-          py-4
-        "
-            >
-
-                {/* Grid wrapper (centers content) */}
-                <div className="mx-auto max-w-screen-xl grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-                    {/* Render 6 grid items */}
+            {/* ------------ FEED GRID ------------ */}
+            <section className="py-4">
+                <div className="mx-auto max-w-screen-xl grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                     {Array.from({ length: 6 }).map((_, i) => (
                         <div key={i} className="flex justify-center">
                             <a
@@ -118,12 +105,12 @@ export default function Feed() {
                             >
                                 <div
                                     className="
-          w-full max-w-sm aspect-square
-          rounded-2xl overflow-hidden
-          border-3 border-blue-200
-          hover:-translate-y-1 transition-all duration-300
-          hover:shadow-[0_8px_30px_rgba(66,133,244,0.35)]
-        "
+                    w-full aspect-square
+                    rounded-2xl overflow-hidden
+                    border-3 border-blue-200
+                    hover:-translate-y-1 transition-all duration-300
+                    hover:shadow-[0_8px_30px_rgba(66,133,244,0.35)]
+                  "
                                 >
                                     <img
                                         src="/grid.png"
@@ -134,7 +121,6 @@ export default function Feed() {
                             </a>
                         </div>
                     ))}
-
                 </div>
             </section>
         </main>
