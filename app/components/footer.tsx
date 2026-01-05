@@ -15,7 +15,7 @@ function SocialIcons({
   }
 
   const dimension = {
-    home: { width: 28, height: 28 },
+    home: { width: 35, height: 35 },
     contact: { width: 45, height: 45 },
   };
 
@@ -49,7 +49,6 @@ function SocialIcons({
 }
 
 
-
 export default function Footer() {
   const pathname = usePathname();
 
@@ -62,7 +61,7 @@ export default function Footer() {
   return (
     <footer>
       {/* ================= MOBILE FOOTER (ALL PAGES) ================= */}
-      <div className="font-[var(--font-product-sans)] md:hidden bg-[#1D1D1D] text-white px-3 py-5">
+      <div className="font-[var(--font-product-sans)] font-medium md:hidden bg-[#1D1D1D] text-white px-3 py-5">
         <div className="flex flex-col gap-6">
           <Image src="/Logo.svg" alt="GDG Logo" width={logoSize.width} height={logoSize.height} />
 
@@ -85,7 +84,7 @@ export default function Footer() {
 
       {/* ================= DESKTOP FOOTER ================= */}
       <div
-        className={`font-[var(--font-product-sans)] hidden md:block ${
+        className={`font-[var(--font-product-sans)] font-medium hidden md:block ${
           isContact
             ? "bg-white border-t border-gray-300 text-black"
             : isHome
@@ -94,7 +93,7 @@ export default function Footer() {
         }`}
       >
         { isContact && <div className="w-[95%] h-px bg-gray-500 mx-auto" /> }
-        <div className={`mx-auto ${isContact ?"px-16 py-5" :isHome ? "px-8 py-10" : "px-12 py-5"} flex items-center justify-between`}>
+        <div className={`mx-auto ${isContact ?"px-16 py-5" :isHome ? "px-12 py-10" : "px-12 py-5"} flex items-center justify-between`}>
           {/* LEFT */}
           <div className={`flex gap-4 ${
     isHome
