@@ -65,14 +65,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${fragmentMono.variable} ${neueMontreal.variable} ${productSans.variable} antialiased`}
-      >
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body
+                className={`${fragmentMono.variable} ${neueMontreal.variable} ${productSans.variable} antialiased`}
+            >
+                {children}
+                <Footer />
+            </body>
+        </html>
+    );
 }
