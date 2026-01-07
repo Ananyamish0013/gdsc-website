@@ -1,6 +1,7 @@
 // Feed page component
 
-import { SearchIcon, DropdownIcon } from "@/app/feeds";
+import { SearchIcon, DropdownIcon } from "@/app/components/icons";
+
 export default function Feed() {
     const links = [
         "https://www.instagram.com/gdgnsut/",
