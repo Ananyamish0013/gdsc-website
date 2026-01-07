@@ -9,6 +9,7 @@ const heroImages = [
   "/hero-3.svg",
 ];
 
+
 export default function HomePage() {
   const [currentImage, setCurrentImage] = useState(0);
 
