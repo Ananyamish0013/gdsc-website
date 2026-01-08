@@ -13,7 +13,7 @@ export default function Feed() {
     ];
 
     return (
-        <main className="min-h-screen w-full bg-white px-4 sm:px-6 lg:px-12 py-6 sm:py-10">
+        <main className="min-h-screen w-full bg-[url('/background.png')] px-4 sm:px-6 lg:px-12 py-6 sm:py-10" >
 
             {/* ------------ HEADING ------------ */}
             <section className="mb-8 sm:mb-10">
@@ -92,9 +92,11 @@ export default function Feed() {
                     />
                 </div>
             </section>
-
+            
             {/* ------------ FEED GRID ------------ */}
-            <section className="py-4 overflow-x-hidden">
+            <section className="py-10">
+
+
                 <div className="mx-auto max-w-screen-xl grid grid-cols-1 place-items-center gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                     {Array.from({ length: 6 }).map((_, i) => (
                         <a
@@ -104,16 +106,19 @@ export default function Feed() {
                             rel="noopener noreferrer"
                             className="w-full max-w-sm"
                         >
-                            <div className="
-          aspect-square
-          w-full
-          rounded-2xl
-          overflow-hidden
-          border-4 border-blue-200 
-          transition-all duration-300
-          hover:-translate-y-1
-          hover:shadow-[0_8px_30px_rgba(66,133,244,0.35)]
-        ">
+                            <div
+                                className="
+            aspect-square
+            w-full
+            rounded-2xl
+            overflow-hidden
+            border-4 border-blue-200
+            bg-white
+            transition-all duration-300
+            hover:-translate-y-1
+            hover:shadow-[0_8px_30px_rgba(66,133,244,0.35)]
+          "
+                            >
                                 <img
                                     src="/grid.png"
                                     alt="Event"
@@ -124,6 +129,7 @@ export default function Feed() {
                     ))}
                 </div>
             </section>
+
 
         </main>
     );
